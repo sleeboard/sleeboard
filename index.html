@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<input type="text" name="text" id="text" class="sleeboard">
+<input type="text" name="text" id="text2" class="sleeboard">
+<div>
+    <button id="enable1" onclick="Lang.enable('#text');">enable1</button>
+    <button id="enable2" onclick="Lang.enable('#text2');">enable2</button>
+    <button id="enableall" onclick="Lang.enable('.sleeboard');">enableAll</button>
+</div>
+<div>
+    <button id="disable1" onclick="Lang.disable('#text');">disable1</button>
+    <button id="disable2" onclick="Lang.disable('#text2');">disable2</button>
+    <button id="disableall" onclick="Lang.disable('.sleeboard');">disableAll</button>
+</div>
+<script type="text/javascript" src="dist/sleeboard.min.js"></script>
+<script type="text/javascript">
+    var Lang = sleeboard();
+</script>
+</body>
+</html>

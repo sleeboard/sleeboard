@@ -1,0 +1,27 @@
+{
+  "name": "sleeboard",
+  "version": "0.0.1",
+  "description": "International keyboard to integrate to your website.",
+  "main": "none",
+  "dependencies": {},
+  "devDependencies": {
+    "del": "^2.2.0",
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-jasmine": "^2.2.1",
+    "gulp-sourcemaps": "^2.4.1",
+    "gulp-uglify": "^2.0.1"
+  },
+  "scripts": {
+    "test": "jasmine",
+    "scripts": "gulp scripts"
+  },
+  "keywords": [
+    "keyboard",
+    "language",
+    "amharic",
+    "website"
+  ],
+  "author": "Nathan Mulugeta <nathanmuler2@gmail.com>",
+  "license": "MIT"
+}

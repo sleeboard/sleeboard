@@ -1,0 +1,24 @@
+{
+  "name": "sleeboard",
+  "description": "Amharic keyboard to integrate to your website.",
+  "version": "0.0.1",
+  "main": "dist/sleeboard.min.js",
+  "authors": [
+    "Nathan Mulugeta <nathanmuler2@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "keyboard",
+    "language",
+    "amharic",
+    "website"
+  ],
+  "homepage": "https://github.com/sleeboard/sleeboard",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
