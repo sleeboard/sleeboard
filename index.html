@@ -1,33 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title></title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Sleeboard is an open source Amharic keyboard to add to your website. It's always free.">
+
+  <meta property="og:url" content="http://sleeboard.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Sleeboard: Amharic keyboard">
+  <meta property="og:description" content="Sleeboard is an open source Amharic keyboard to add to your website. It's always free.">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@nathenapse">
+  <meta name="twitter:creator" content="@nathenapse">
+  <meta name="twitter:title" content="Sleeboard: Amharic keyboard">
+  <meta name="twitter:description" content="Sleeboard is an open source Amharic keyboard to add to your website. It's always free."> 
+
+  <title>Sleeboard: Amharic keyboard</title>
+  
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.3.2/css/bulma.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/default.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
 </head>
 <body>
-<input type="text" name="text" id="text" class="sleeboard">
-<input type="text" name="text" id="text2" class="sleeboard">
-<div>
-    <button id="enable1" onclick="enableAmharic('#text');">enable1</button>
-    <button id="enable2" onclick="enableAmharic('#text2');">enable2</button>
-    <button id="enableall" onclick="enableAmharic('.sleeboard');">enableAll</button>
+  <div class="container">
+    <section class="hero is-medium has-text-centered">
+      <div class="hero-head">
+        <div class="container">
+         <nav class="nav">
+          <div class="nav-left">
+            <a class="nav-item is-brand">
+             <img src="images/sleeboard-logo.png" alt="sleeboard"/>
+           </a>
+         </div>
+
+         <div class="nav-center">
+          <a class="nav-item" href="https://github.com/sleeboard/sleeboard">
+            <span class="icon">
+              <i class="fa fa-github"></i>
+            </span>
+          </a>
+        </div>
+      </nav>
+    </div>
+  </div>
+</section>
 </div>
-<div>
-    <button id="disable1" onclick="disableAmharic('#text');">disable1</button>
-    <button id="disable2" onclick="disableAmharic('#text2');">disable2</button>
-    <button id="disableall" onclick="disableAmharic('.sleeboard');">disableAll</button>
+<section class="hero is-primary">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-vcentered">
+        <div class="column">
+          <p class="title">
+            Documentation
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+<section class="section">
+  <div class="container">
+    <h1 class="title">Install</h1>
+    <h2 class="subtitle">
+      Using Bower
+    </h2>
+
+    <hr>
+
+    <div class="content">
+      <div class="notification">
+        bower install --save sleeboard
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<section class="section">
+  <div class="container">
+    <h1 class="title">Usage</h1>
+    <h2 class="subtitle">How to use Sleeboard.</h2>
+
+    <hr>
+
+
+    <div class="columns">
+      <div class="column is-one-third">
+        <div>
+          <p class="control has-addons has-addons-left">
+            <a class="button is-primary" onclick="enableAmharic('#first');">
+              AM
+            </a>
+            <input class="input sleeboard" type="text" id="first" placeholder="First">
+            <a class="button is-primary" onclick="disableAmharic('#first');">
+              EN
+            </a>
+          </p>
+          <p class="control has-addons has-addons-left">
+            <a class="button is-primary" onclick="enableAmharic('#second');">
+              AM
+            </a>
+            <input class="input sleeboard" type="text" id="second" placeholder="Second">
+            <a class="button is-primary" onclick="disableAmharic('#second');">
+              EN
+            </a>
+          </p>
+          <a class="button is-success" onclick="enableAmharic('.sleeboard');">All AM</a> 
+          <a class="button is-success" onclick="disableAmharic('.sleeboard');">All EN</a> 
+        </div>
+      </div>
+      <div class="column">
+        <figure class="highlight"><pre><code class="hljs xml">    
+          &lt;div&gt;
+            &lt;p class=&quot;control has-addons has-addons-left&quot;&gt;
+              &lt;a class=&quot;button is-primary&quot; onclick=&quot;enableAmharic('#first');&quot;&gt;
+                AM
+              &lt;/a&gt;
+              &lt;input class=&quot;input sleeboard&quot; type=&quot;text&quot; id=&quot;first&quot; placeholder=&quot;First&quot;&gt;
+              &lt;a class=&quot;button is-primary&quot; onclick=&quot;disableAmharic('#first');&quot;&gt;
+                EN
+              &lt;/a&gt;
+            &lt;/p&gt;
+            &lt;p class=&quot;control has-addons has-addons-left&quot;&gt;
+              &lt;a class=&quot;button is-primary&quot; onclick=&quot;enableAmharic('#second');&quot;&gt;
+                AM
+              &lt;/a&gt;
+              &lt;input class=&quot;input sleeboard&quot; type=&quot;text&quot; id=&quot;second&quot; placeholder=&quot;Second&quot;&gt;
+              &lt;a class=&quot;button is-primary&quot; onclick=&quot;disableAmharic('#second');&quot;&gt;
+                EN
+              &lt;/a&gt;
+            &lt;/p&gt;
+            &lt;a class=&quot;button is-success&quot; onclick=&quot;enableAmharic('.sleeboard');&quot;&gt;All AM&lt;/a&gt; 
+            &lt;a class=&quot;button is-success&quot; onclick=&quot;disableAmharic('.sleeboard');&quot;&gt;All EN&lt;/a&gt; 
+          &lt;/div&gt;
+
+          &lt;script type=&quot;text/javascript&quot; src=&quot;dist/sleeboard.min.js&quot;&gt;&lt;/script&gt;
+          &lt;script type=&quot;text/javascript&quot;&gt;
+            var Lang = sleeboard();
+            function disableAmharic (field) {
+              Lang.disable(field);
+            }
+            function enableAmharic (field) {
+              Lang.enable(field);
+            }
+          &lt;/script&gt;
+    </code></pre></figure>
+  </div>
 </div>
+
+</div>
+</section>
+</div>
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <p>
+        Made with <span class="">♥</span> by <b><a class="white-text text-lighten-3" href="https://github.com/nathenapse">Nathenenapse</a></b>
+      </p>
+    </div>
+  </div>
+</footer>
 <script type="text/javascript" src="dist/sleeboard.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
 <script type="text/javascript">
-    var Lang = sleeboard();
+  var Lang = sleeboard();
 
-    function disableAmharic (field) {
-      Lang.disable(field);
-    }
+  function disableAmharic (field) {
+    Lang.disable(field);
+  }
 
-    function enableAmharic (field) {
-      Lang.enable(field);
-    }
+  function enableAmharic (field) {
+    Lang.enable(field);
+  }
 </script>
 </body>
 </html>
